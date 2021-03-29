@@ -125,6 +125,6 @@ app.get('/insert_account', (req, res) => {
     res.sendFile(__dirname + '/insert_account.html');
 });
 
-http.listen(8080, () => {
-    console.log('listening on :8080');
+http.listen(80, () => {
+    console.log('listening on :80');
 });
