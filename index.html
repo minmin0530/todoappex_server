@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>todoappex</title>
+        <script>
+            fetch('get_accounts')
+            .then( (res) => res.json() )
+            .then( (docs) => {
+                console.log(docs);
+
+                document.getElementById("accounts").innerHTML = "";
+                for (const doc of docs) {
+                    document.getElementById("accounts").innerHTML += doc.name + "<br>";
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="accounts"></div>
+    </body>
+</html>
